@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(120deg, #FFDEE9, #B5FFFC);
+            background-size: 400% 400%;
+            animation: gradientBG 12s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .header {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 15px 25px;
+            border-radius: 20px;
+            margin: 20px 0;
+            font-weight: bold;
+            font-size: 28px;
+            color: #333;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            animation: bounce 1.5s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            max-width: 1000px;
+            gap: 20px;
+        }
+
+        .info-box {
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 12px;
+            padding: 25px;
+            width: 45%;
+            line-height: 1.8;
+            color: #f8f8f8;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .info-box strong {
+            color: #d4f0f0;
+            font-size: 1.2em;
+        }
+
+        .image-box {
+            width: 45%;
+            text-align: center;
+        }
+
+        .image-box img {
+            border-radius: 12px;
+            width: 100%;
+            height: auto;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .image-box img:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .info-box, .image-box {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Family</div>
+    <div class="container">
+        <!-- Left: Info Box -->
+        <div class="info-box">
+            <p><strong>My father's name:</strong> Mohd Aminuddin Bin Mustapha</p>
+            <p><strong>Age:</strong> 48</p>
+            <p><strong>Occupation:</strong> as a driver for his boss</p>
+            <p><strong>My mother's name:</strong> Siti Maziah Binti Mat Jusoff</p>
+            <p><strong>Age:</strong> 52</p>
+            <p><strong>Occupation:</strong> As a nurse</p>
+            <p><strong>Number of siblings:</strong> 4, so i'm the second child</p>
+        </div>
+        <!-- Right: Image Box -->
+        <div class="image-box">
+            <img src="fam.jpg" alt="Family Photo">
+        </div>
+    </div>
+</body>
+</html>
